@@ -4,15 +4,13 @@
 <dict>
 	<key>bundleid</key>
 	<string>carlosnz.timezones</string>
-	<key>category</key>
-	<string>Tools</string>
 	<key>connections</key>
 	<dict>
-		<key>0C80DC80-B943-48B3-82D3-1D5B0B37BB74</key>
+		<key>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3E37F651-EEB7-451F-B0AD-28710998F443</string>
+				<string>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -26,19 +24,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>5E6BA0B3-802A-486E-8413-6F92609B321B</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>3E37F651-EEB7-451F-B0AD-28710998F443</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -86,11 +71,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
+		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
+				<string>66A14357-6BF2-48B9-8B55-A5B426EEE69E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -99,7 +84,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>B3D2103A-E31D-454E-BD6E-8F13020AC68D</key>
+		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -117,19 +102,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F15F2405-5743-4407-9BFF-A45E6783BA88</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>BFC9E74C-8EB5-4863-8FE6-44AC5AE9427A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>B3D2103A-E31D-454E-BD6E-8F13020AC68D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -177,6 +149,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>DBA4F782-B7E9-486E-92A4-D06655FFE839</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3E37F651-EEB7-451F-B0AD-28710998F443</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
 		<array>
 			<dict>
@@ -215,7 +200,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Carl Smith (@CarlosNZ)</string>
+	<string>Carl Smith (@CarlosNZ). Updated by Jarek Hartman</string>
 	<key>description</key>
 	<string>A World Clock for Alfred</string>
 	<key>disabled</key>
@@ -256,43 +241,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>x="{query}"
-IFS='|'
-data=($x)
-
-city="${data[0]}"
-city_time="${data[1]}"
-city_date="${data[2]}"
-country="${data[3]}"
-tz_name="${data[4]}"
-UTC_offset="${data[5]}"
-country_code="${data[6]}"
-
-echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" • $tz_name ($UTC_offset)"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>942CCE71-9883-4AB2-A558-B5A44993DF3B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -334,6 +288,29 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>echo "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>942CCE71-9883-4AB2-A558-B5A44993DF3B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>largetypetext</key>
 				<string>{query}</string>
 			</dict>
@@ -343,27 +320,6 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>timezone add</string>
-				<key>subtext</key>
-				<string>Add a city to your TimeZones cities list</string>
-				<key>text</key>
-				<string>New city?</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>5E6BA0B3-802A-486E-8413-6F92609B321B</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -437,30 +393,38 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>queuedelaycustom</key>
 				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>timezone add</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<false/>
 				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
 				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
 				<key>runningsubtext</key>
-				<string>Getting locations...</string>
+				<string>Fetching time data...</string>
 				<key>script</key>
-				<string>./input_city.sh "{query}"</string>
+				<string>#$city=$(echo "{query}" | sed 's/ /_/g')
+
+./timezone_get_city.sh "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Add a city to your TimeZones cities list</string>
+				<string>List of matching cities</string>
 				<key>title</key>
-				<string>New city?</string>
+				<string>Add a new city</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -469,53 +433,9 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>0C80DC80-B943-48B3-82D3-1D5B0B37BB74</string>
+			<string>DBA4F782-B7E9-486E-92A4-D06655FFE839</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>63</integer>
-				<key>script</key>
-				<string>./update.sh</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>B3D2103A-E31D-454E-BD6E-8F13020AC68D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>timezone update</string>
-				<key>subtext</key>
-				<string>This may take a few moments.</string>
-				<key>text</key>
-				<string>Update all TimeZone info online</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>BFC9E74C-8EB5-4863-8FE6-44AC5AE9427A</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -693,18 +613,69 @@ echo "Current time in $city, $country:"$'\n'"$city_time on $city_date"$'\n'" •
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone edit</string>
+				<key>subtext</key>
+				<string>You can edit your configuration file</string>
+				<key>text</key>
+				<string>Edit file with defined cities</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>~/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones/timezones.txt</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Now you can edit your file. Don't break it!</string>
+				<key>title</key>
+				<string>TImeZones</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>66A14357-6BF2-48B9-8B55-A5B426EEE69E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v1.8
-15 October 2016
+	<string>TimeZones v2.0
+22 September 2018
 
-=======
-UPGRADE
-=======
 
-After updating from previous versions of the flow, invoke "timezone update".
-
-Moreover, a manual "timezone update" is required after DST change.
 
 =====
 USAGE
@@ -716,7 +687,7 @@ Keyword: tz &lt;time&gt; - (where time is HH, HHMM or HH:MM) - convert provided 
 
 Keyword: timezone add [your city] - add your city to the list. (To remove a city, option-select it from the main list.)
 
-Keyword: timezone update - refresh timezone data for all saved cities.
+Keyword: timezone edit - open for edit of cities file.
 
 Keyword: timezone move - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).
 
@@ -726,8 +697,7 @@ Keyword: timezone 12h, timezone 24h - change format of displayed time.
 CREDITS
 =======
 
-Geocoding and Timezone information from Google Maps APIs:
-https://developers.google.com/maps/documentation/webservices/
+GeoIP2 City and Country CSV Databases: https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/
 
 Flag icons from: http://www.free-country-flags.com
 (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
@@ -738,6 +708,11 @@ Icon design by Logo Open Stock (modified from original) http://www.logoopenstock
 =========
 CHANGELOG
 =========
+
+v2.0
+22 September 2018
+Fixes after google deprecating their map APIs.
+
 
 v1.9
 4 May 2017
@@ -825,54 +800,54 @@ v1.0
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
-		<key>0C80DC80-B943-48B3-82D3-1D5B0B37BB74</key>
+		<key>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<real>240</real>
+			<integer>770</integer>
 		</dict>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<real>240</real>
+			<integer>250</integer>
 		</dict>
 		<key>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>700</integer>
 			<key>ypos</key>
-			<integer>660</integer>
+			<integer>580</integer>
 		</dict>
-		<key>5E6BA0B3-802A-486E-8413-6F92609B321B</key>
+		<key>66A14357-6BF2-48B9-8B55-A5B426EEE69E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>700</integer>
 			<key>ypos</key>
-			<real>120</real>
+			<integer>770</integer>
 		</dict>
 		<key>7C2B2778-8AEE-4861-9E54-DD7E3C7B49F7</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>640</integer>
 		</dict>
 		<key>814F7D3F-03F9-4248-8308-ECA4D3792F3F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<real>480</real>
+			<integer>400</integer>
 		</dict>
 		<key>8FB97B65-0E08-4EC2-A78E-EB05887599EF</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>400</integer>
 		</dict>
 		<key>942CCE71-9883-4AB2-A558-B5A44993DF3B</key>
 		<dict>
@@ -881,19 +856,19 @@ v1.0
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
+		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>770</integer>
+		</dict>
 		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
 			<real>120</real>
-		</dict>
-		<key>B3D2103A-E31D-454E-BD6E-8F13020AC68D</key>
-		<dict>
-			<key>xpos</key>
-			<integer>500</integer>
-			<key>ypos</key>
-			<real>360</real>
 		</dict>
 		<key>BC542037-8795-4FE1-8534-AF381F4197FC</key>
 		<dict>
@@ -909,40 +884,40 @@ v1.0
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
-		<key>BFC9E74C-8EB5-4863-8FE6-44AC5AE9427A</key>
-		<dict>
-			<key>xpos</key>
-			<integer>300</integer>
-			<key>ypos</key>
-			<real>360</real>
-		</dict>
 		<key>C0EA86FF-9C54-4A0D-B7A5-3ED5CA9F5675</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>520</integer>
 		</dict>
 		<key>C30DCDAB-4A04-4B8C-8DBD-2BEF53E15F31</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>520</integer>
 		</dict>
 		<key>D8D3E88A-E982-4F27-B3AA-46DAD6C5D87F</key>
 		<dict>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>640</integer>
+		</dict>
+		<key>DBA4F782-B7E9-486E-92A4-D06655FFE839</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>250</integer>
 		</dict>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<real>480</real>
+			<integer>400</integer>
 		</dict>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
 		<dict>
@@ -953,8 +928,8 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.9</string>
+	<string>2.0</string>
 	<key>webaddress</key>
-	<string>http://geekzone.philosophicalzombie.net/</string>
+	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
 </plist>

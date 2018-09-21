@@ -16,6 +16,15 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 
 ![Preview 2](https://jhartman.pl/wp-content/uploads/2016/12/Alfred3.png)
 
+## Commands
+
+* **Keyword**: *tz* (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
+* **Keyword**: *tz <time>* - (where time is HH, HHMM or HH:MM) - convert provided time into the time of your cities. 
+* **Keyword**: *timezone add [your city]* - add your city to the list. (To remove a city, option-select it from the main list.)
+* **Keyword**: *timezone edit* - open for edit of cities file.
+* **Keyword**: *timezone move* - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).
+* **Keyword**: *timezone 12h*, *timezone 24h* - change format of displayed time.
+
 
 ## Installation steps
 

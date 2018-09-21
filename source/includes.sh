@@ -60,6 +60,12 @@ if [ ! -e "$timezone_file" ]; then
 	timezone_file=$(cat )
 fi
 
+if ! grep 'Version2.0' "$TZPREFS/timezones.txt" > /dev/null
+then
+	cp default_timezones.txt "$TZPREFS/timezones.txt"
+fi
+
+
 # Create an empty file (extra configuration) if it does not exist
 
 if [[ ! -e "${CONFIG_EXTRA}"  ]]; then

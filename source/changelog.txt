@@ -1,3 +1,9 @@
+v2.0
+22 September 2018
+
+Fix after google deprecated map APIs
+
+
 v1.7
 22 March 2014
 
