@@ -17,4 +17,9 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 ![Preview 2](https://jhartman.pl/wp-content/uploads/2016/12/Alfred3.png)
 
 
+## Installation steps
 
+1. Install Alfred
+2. Purchase premium version of Alfred to enable Workflows
+3. Download latest ZIP file from [releases](https://github.com/jaroslawhartman/TimeZones-Alfred/releases)
+4. Unzip and double click to add to Alfred
