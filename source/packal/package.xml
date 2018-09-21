@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>TimeZones</name>
+  <version>1.7a</version>
+  <bundle>carlosnz.timezones</bundle>
+  <updated>1438646113</updated>
+  <file>timezones_v1.7a.alfredworkflow</file>
+</workflow>

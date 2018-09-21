@@ -1,0 +1,60 @@
+v1.7
+22 March 2014
+
+* List now always shows in same the order. (Achieved by removing “uid” parameter.)
+
+v1.61a
+16 March 2014
+
+*Removed Alleyoop update.json file. That’s all.
+
+v1.61
+2 April 2013
+
+*Small fix for Netherlands flag matching.
+
+v1.6
+31 March 2013
+
+* Now supports custom "one-off" lookups for places you don't want to permanently add to your main list. Just keep typing the place name after the "tz" keyword (or hotkey) - as soon as it doesn't match any of the places in your list, it will look up the custom place you've entered.
+* Added support for phyllisstein's Alleyoop auto-updater. (http://www.alfredforum.com/topic/1582-alleyoop-update-alfred-workflows/)
+* [EXPERIMENTAL] - support for autocomplete for adding place names. You'll need to add a keyword yourself to the script filter if you want to try it out. The reason I haven't enabled it by default is that I've found it kind of slow and I'm not sure it's actually an improvement over the current method. Let me know what you think.
+* Added (unofficial) Antarctica flag to flag repository. (Try tz south pole. ;) )
+
+
+v1.5  
+28 March 2013
+
+* Major overhaul to now use Google's Geocoding API and Timezone API to acquire the required data. Should be a **lot** more reliable and consistent, as well as more flexible with input names.
+* Flag icons! The workflow compares the returned country name with a bundled repository of flag icons and does a simple name match. Please report any missing or incorrect flag errors you encounter so I can improve the workflow.
+* More data retrieved and displayed, including Timezone name, country, etc.
+* When doing a full "update", a text file is saved to the Desktop showing which cities have changed.
+* General enhancements and tweaks.
+
+v1.4  
+20 Mar 2013
+
+* You can now move your list of saved cities to a file location of your choice (eg. Dropbox, to sync between machines). Keyword: timezone move
+
+v1.3  
+18 Feb 2013
+
+* Fixes to account for changes to the Wolfram Alpha API
+* When doing a full "update", it won't fail the whole update if one city fails. A list of failed updates is saved to your Desktop.
+
+v1.2  
+4 Feb 2013
+
+* fixes to make "update" work better/properly/at all.
+
+v1.1  
+3 Feb 2013
+
+* Fixed the problem with cities with half-hour UTC offsets (eg. Adelaide—UTC+10.5, New Delhi—UTC+5.5
+* You can search the list of displayed cities (useful if you've got a lot) — just start typing after the "tz"
+* Hotkey to launch the list (set to Ctrl-Z by default)
+
+v1.0  
+2 Feb 2013
+
+* Initial release

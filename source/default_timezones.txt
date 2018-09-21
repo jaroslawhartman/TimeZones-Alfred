@@ -1,0 +1,12 @@
+Auckland|Auckland|New Zealand|-36.8484597|174.7633315|46800|Pacific/Auckland|New Zealand Daylight Time|UTC+13
+Sydney|Sydney|Australia|-33.8674869|151.2069902|39600|Australia/Sydney|Australian Eastern Daylight Time|UTC+11
+New York|New York|United States|40.7143528|-74.0059731|-14400|America/New_York|Eastern Daylight Time|UTC-4
+Los Angeles|Los Angeles|United States|34.0522342|-118.2436849|-25200|America/Los_Angeles|Pacific Daylight Time|UTC-7
+London|London|United Kingdom|51.5112139|-0.1198244|0|Europe/London|Greenwich Mean Time|UTC+0
+Paris|Paris|France|48.8566140|2.3522219|3600|Europe/Paris|Central European Standard Time|UTC+1
+Tokyo|Tokyo|Japan|35.6894875|139.6917064|32400|Asia/Tokyo|Japan Standard Time|UTC+9
+Beijing|Beijing|China|39.9040300|116.4075260|28800|Asia/Chongqing|China Standard Time|UTC+8
+Hong Kong|Hong Kong|Hong Kong|22.3964280|114.1094970|28800|Asia/Hong_Kong|Hong Kong Standard Time|UTC+8
+Capetown|Cape Town|South Africa|-33.9248685|18.4240553|7200|Africa/Johannesburg|South Africa Standard Time|UTC+2
+Moscow|Moscow|Russia|55.7496460|37.6236800|14400|Europe/Moscow|Moscow Standard Time|UTC+4
+Dubai|Dubai|United Arab Emirates|25.2711390|55.3074850|14400|Asia/Dubai|Gulf Standard Time|UTC+4
