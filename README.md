@@ -32,3 +32,9 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 2. Purchase premium version of Alfred to enable Workflows
 3. Download latest ZIP file from [releases](https://github.com/jaroslawhartman/TimeZones-Alfred/releases)
 4. Unzip and double click to add to Alfred
+
+## References
+
+* GeoIP2 City and Country CSV Databases: https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/
+* Flag icons from: http://www.free-country-flags.com (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
+* Icon design by Logo Open Stock (modified from original) http://www.logoopenstock.com
