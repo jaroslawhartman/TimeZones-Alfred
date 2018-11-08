@@ -5,7 +5,14 @@ city_string="${city// /+}"
 
 city="$(echo "$city" | sed 's/\\ / /g')"
 
-[[ ! -z "$city" ]] && cat GeoLite2-City-Locations-en.csv | awk -F"," -v CITY="$city" '{if(tolower($11)~tolower(CITY)){print $0}};' | head -20 > /tmp/cities.tmp
+[[ ! -z "$city" ]] && cat GeoLite2-City-Locations-en.csv | awk -F"," -v CITY="$city" '{if(tolower($11)~tolower(CITY)){print $0}};' | head -50 > /tmp/cities.tmp
+
+if [[ ! -s /tmp/cities.tmp ]] 
+then
+	cat GeoLite2-City-Locations-en.csv | awk -F"," -v CITY="$city" '{if(tolower($13)~tolower(CITY)){print $0}};' | head -50 > /tmp/cities.tmp
+fi
+
+sort /tmp/cities.tmp | uniq > /tmp/cities2.tmp
 
 echo '<?xml version="1.0"?>
 	<items>'
@@ -24,9 +31,10 @@ then
 		<title>'$city_retrieved", "$region'</title>	
 		<subtitle>'$country' ('$country_code') , Timezone:' $timezone'</subtitle>
 		</item>'
-	done < '/tmp/cities.tmp'
+	done < '/tmp/cities2.tmp'
 fi
 
 [[ -e '/tmp/cities.tmp' ]] && rm '/tmp/cities.tmp'
+[[ -e '/tmp/cities2.tmp' ]] && rm '/tmp/cities2.tmp'
 
 echo '</items>'

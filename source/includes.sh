@@ -33,16 +33,11 @@ shopt -s expand_aliases
 #Case-insensitive matching
 shopt -s nocasematch
 
-#define aliases
-alias growlnotify='/usr/local/bin/growlnotify TimeZones --image icon.png -m '
-
 #First run check
 if [ ! -e "$TZPREFS/config-1-5" ]; then
 	old_timezone_file=$(cat "$TZPREFS/config")
 	mv -f "$old_timezone_file" "$HOME/Desktop/timezones_OLD.txt"
-	if [ -e "$HOME/Desktop/timezones_OLD.txt" ]; then
-		growlnotify "Welcome to TimeZones v1.6."$'\n'"Your old timezones.txt file has been moved to the Desktop." -s
-	fi
+	
 	mkdir "$TZPREFS"
 	cp default_timezones.txt "$TZPREFS/timezones.txt"
 	rm "$TZPREFS"/config*

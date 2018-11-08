@@ -414,7 +414,7 @@
 				<key>runningsubtext</key>
 				<string>Fetching time data...</string>
 				<key>script</key>
-				<string>#$city=$(echo "{query}" | sed 's/ /_/g')
+				<string>$city=$(echo "{query}" | sed 's/ /_/g')
 
 ./timezone_get_city.sh "{query}"</string>
 				<key>scriptargtype</key>
@@ -672,8 +672,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.0
-22 September 2018
+	<string>TimeZones v2.1
+6 November 2018
 
 
 
@@ -708,6 +708,13 @@ Icon design by Logo Open Stock (modified from original) http://www.logoopenstock
 =========
 CHANGELOG
 =========
+
+All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.1
+6 November 2018
+Fix for issue #4 - cannot add a new city
+Fix for issue #5 - remove dependency to Growl
 
 v2.0
 22 September 2018
