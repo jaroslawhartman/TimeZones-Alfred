@@ -25,6 +25,10 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 * **Keyword**: *timezone move* - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).
 * **Keyword**: *timezone 12h*, *timezone 24h* - change format of displayed time.
 
+## Keyboard shortcuts
+
+* *Option + Enter* - remove from the list
+* *Command + Enter* - pin/unpin the city from the top of the list. See [release v2.3](https://github.com/jaroslawhartman/TimeZones-Alfred/releases/tag/v2.3) for the demo.
 
 ## Installation steps
 
