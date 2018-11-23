@@ -71,6 +71,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9740FE97-5B7D-4D30-9EF3-5D845C5CA7DC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
 		<array>
 			<dict>
@@ -197,6 +210,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9740FE97-5B7D-4D30-9EF3-5D845C5CA7DC</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Toggle Favourite flag for this city</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -212,29 +235,13 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
+				<key>largetypetext</key>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
-			<string>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</string>
+			<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -288,6 +295,35 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -305,19 +341,6 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>942CCE71-9883-4AB2-A558-B5A44993DF3B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>largetypetext</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
-			<key>uid</key>
-			<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -373,6 +396,29 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
+				<string>./toggle_fav_city.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9740FE97-5B7D-4D30-9EF3-5D845C5CA7DC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
 				<string>./add_city.sh "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -398,7 +444,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>keyword</key>
@@ -414,7 +460,7 @@
 				<key>runningsubtext</key>
 				<string>Fetching time data...</string>
 				<key>script</key>
-				<string>$city=$(echo "{query}" | sed 's/ /_/g')
+				<string>#$city=$(echo "{query}" | sed 's/ /_/g')
 
 ./timezone_get_city.sh "{query}"</string>
 				<key>scriptargtype</key>
@@ -422,7 +468,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>List of matching cities</string>
+				<string>List of matching cities (keep typing city name)</string>
 				<key>title</key>
 				<string>Add a new city</string>
 				<key>type</key>
@@ -456,7 +502,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</string>
+			<string>8FB97B65-0E08-4EC2-A78E-EB05887599EF</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -500,7 +546,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>8FB97B65-0E08-4EC2-A78E-EB05887599EF</string>
+			<string>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -637,21 +683,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>~/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones/timezones.txt</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
-			<key>uid</key>
-			<string>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -670,10 +701,25 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>~/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones/timezones.txt</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.1
-6 November 2018
+	<string>TimeZones v2.3
+23 November 2018
 
 
 
@@ -710,6 +756,15 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.3
+9 November 2018
+New feature #9: Favourite (pinned) cities
+
+v2.2
+9 November 2018
+Fixed version number.
+
 
 v2.1
 6 November 2018
@@ -810,51 +865,51 @@ v1.0
 		<key>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>930</integer>
 		</dict>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>410</integer>
 		</dict>
 		<key>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>690</integer>
 			<key>ypos</key>
-			<integer>580</integer>
+			<integer>740</integer>
 		</dict>
 		<key>66A14357-6BF2-48B9-8B55-A5B426EEE69E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>690</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>930</integer>
 		</dict>
 		<key>7C2B2778-8AEE-4861-9E54-DD7E3C7B49F7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>640</integer>
+			<integer>800</integer>
 		</dict>
 		<key>814F7D3F-03F9-4248-8308-ECA4D3792F3F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>560</integer>
 		</dict>
 		<key>8FB97B65-0E08-4EC2-A78E-EB05887599EF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>560</integer>
 		</dict>
 		<key>942CCE71-9883-4AB2-A558-B5A44993DF3B</key>
 		<dict>
@@ -863,12 +918,19 @@ v1.0
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
-		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
+		<key>9740FE97-5B7D-4D30-9EF3-5D845C5CA7DC</key>
 		<dict>
 			<key>xpos</key>
 			<integer>500</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>250</integer>
+		</dict>
+		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>930</integer>
 		</dict>
 		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
 		<dict>
@@ -894,37 +956,37 @@ v1.0
 		<key>C0EA86FF-9C54-4A0D-B7A5-3ED5CA9F5675</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>520</integer>
+			<integer>680</integer>
 		</dict>
 		<key>C30DCDAB-4A04-4B8C-8DBD-2BEF53E15F31</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>520</integer>
+			<integer>680</integer>
 		</dict>
 		<key>D8D3E88A-E982-4F27-B3AA-46DAD6C5D87F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>290</integer>
 			<key>ypos</key>
-			<integer>640</integer>
+			<integer>800</integer>
 		</dict>
 		<key>DBA4F782-B7E9-486E-92A4-D06655FFE839</key>
 		<dict>
 			<key>xpos</key>
-			<integer>310</integer>
+			<integer>300</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>410</integer>
 		</dict>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>560</integer>
 		</dict>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
 		<dict>
@@ -935,7 +997,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.0</string>
+	<string>2.3</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>

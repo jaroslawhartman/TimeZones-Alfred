@@ -65,11 +65,20 @@ while IFS= read -r line
 	city="${data[0]}"
 	country="${data[1]}"
 	timezone="${data[2]}"
-	country_code="${data[4]}"
+	country_code="${data[3]}"
+	favourite="${data[4]}"
 	if [ -n "$country_code" ]
 	then
 	    country_code_string=" (+$country_code)"
 	fi
+
+	if [[ "$favourite" == "0" ]]
+	then
+	    favourite_string="⭐️ •"
+	else
+	    favourite_string=""	
+	fi
+
 	
 	IFS=$OIFS
 
@@ -94,7 +103,6 @@ while IFS= read -r line
 	city_time=$(TZ=$timezone date $time_to_convert +"$TIME_FORMAT_STR")
 	city_date=$(TZ=$timezone date $time_to_convert +"%A, %d %B" )
 
-
 	#Determine flag icon
 	country_flag=$(echo "$country" | tr '[A-Z]' '[a-z]')
 	country_flag=${country_flag// /_}
@@ -107,13 +115,12 @@ while IFS= read -r line
 		match=1
 		echo '<item arg="'$city, $city_time'" valid="yes">
 		<title>'$city: $city_time'</title>	
-		<subtitle>on '$city_date' • '${country}${country_code_string}' • Timezone: '$timezone'</subtitle>
+		<subtitle>'$favourite_string' on '$city_date' • '${country}${country_code_string}' • Timezone: '$timezone'</subtitle>
 		<icon>./flags/'$flag_icon'</icon>
 		</item>'
 	fi
-	done < "$timezone_file"
+done < <(sort -k 5 -t "|" "$timezone_file")
 
 echo '</items>'
 
-IFS=$OLD_IFS
 exit
