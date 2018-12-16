@@ -65,8 +65,9 @@ while IFS= read -r line
 	city="${data[0]}"
 	country="${data[1]}"
 	timezone="${data[2]}"
-	country_code="${data[3]}"
-	favourite="${data[4]}"
+	country_abbr="${data[3]}"
+	country_code="${data[4]}"
+	favourite="${data[5]}"
 	if [ -n "$country_code" ]
 	then
 	    country_code_string=" (+$country_code)"
@@ -119,7 +120,7 @@ while IFS= read -r line
 		<icon>./flags/'$flag_icon'</icon>
 		</item>'
 	fi
-done < <(sort -k 5 -t "|" "$timezone_file")
+done < <(sort -k 6 -k 1 -t "|" "$timezone_file")
 
 echo '</items>'
 

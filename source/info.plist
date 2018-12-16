@@ -261,7 +261,7 @@
 				<key>keyword</key>
 				<string>tz</string>
 				<key>queuedelaycustom</key>
-				<integer>1</integer>
+				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
 				<false/>
 				<key>queuedelaymode</key>
@@ -277,7 +277,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Display current time in various worldwide cities</string>
+				<string>Display current time in various worldwide locations</string>
 				<key>title</key>
 				<string>TimeZones</string>
 				<key>type</key>
@@ -718,7 +718,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.3
+	<string>TimeZones v2.4
 23 November 2018
 
 
@@ -756,6 +756,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.4
+16 December 2018
+New feature #9: Favourite (pinned) cities (fixes)
 
 v2.3
 9 November 2018
@@ -997,7 +1001,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.3</string>
+	<string>2.4</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>

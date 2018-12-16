@@ -8,7 +8,7 @@ city_definition="${1}"
 	timezone=$(echo "$city_definition" | awk -F'|' '{ print $4 } ')
 	phone_code="$(curl --connect-timeout 20 -s https://restcountries.eu/rest/v2/alpha/$country_code | python -c 'import sys, json; print json.load(sys.stdin)["callingCodes"][0]')"
 
-	echo "$city|$country|$timezone|$country_code|$phone_code" >> "$timezone_file"
+	echo "$city|$country|$timezone|$country_code|$phone_code|1" >> "$timezone_file"
 	sort -o "${timezone_file}.new" "$timezone_file" 
 
 	mv "${timezone_file}.new" "$timezone_file"
