@@ -28,7 +28,8 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 ## Keyboard shortcuts
 
 * *Option + Enter* - remove from the list
-* *Command + Enter* - pin/unpin the city from the top of the list. See [release v2.3](https://github.com/jaroslawhartman/TimeZones-Alfred/releases/tag/v2.3) for the demo.
+* *Command + Enter* - pin/unpin the city from the top of the list.
+![mymovie](https://user-images.githubusercontent.com/964833/48945347-429c3b00-ef2a-11e8-84f9-3fabe8814c8c.gif)
 
 ## Installation steps
 
