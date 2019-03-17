@@ -16,6 +16,10 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 
 ![Preview 2](https://jhartman.pl/wp-content/uploads/2016/12/Alfred3.png)
 
+Conversion of a time in a timezone from your list (Warsaw in the sample) with modified date (plus 3 days in the sample):
+
+![Preview 3](demo-2.5.png)
+
 ## Commands
 
 * **Keyword**: *tz* (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
