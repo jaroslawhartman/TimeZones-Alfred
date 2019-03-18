@@ -16,10 +16,17 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 
 ![Preview 2](https://jhartman.pl/wp-content/uploads/2016/12/Alfred3.png)
 
+Conversion of a time in a timezone from your list (Warsaw in the sample) with modified date (plus 3 days in the sample):
+
+![Preview 3](demo-2.5.png)
+
 ## Commands
 
 * **Keyword**: *tz* (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
-* **Keyword**: *tz <time>* - (where time is HH, HHMM or HH:MM) - convert provided time into the time of your cities. 
+* **Keyword**: *tz [part of city name]* - searches for a city in your cities that matches that name and shows the current time.
+* **Keyword**: *tz [`time`]* - (where `time` is HH, HHMM or HH:MM) - convert provided time into the time of your cities.
+* **Keyword**: *tz [`date`] [`time`]* - (where `time` is as above and `date` is 'today' (short: 't'), or 'tomorrow' (short: 'tm'), or [number of days]d what means to add the number of days to current date, or one of dd, mmdd, yymmdd, yyyymmdd to give an absolute date) - convert provided date and time into time of your cities.
+* **Keyword**: *tz [`source city`] [`date`] [`time`]* - (where `time` and `date` are as above and `source city` is used to search in your city list) - assumes that date and time is given in the timezone of provided source city and converts it into time of your (other) cities.
 * **Keyword**: *timezone add [your city]* - add your city to the list. (To remove a city, option-select it from the main list.)
 * **Keyword**: *timezone edit* - open for edit of cities file.
 * **Keyword**: *timezone move* - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).

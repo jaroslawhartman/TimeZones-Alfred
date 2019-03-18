@@ -718,8 +718,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.4
-23 November 2018
+	<string>TimeZones v2.5
+17 March 2019
 
 
 
@@ -729,7 +729,13 @@ USAGE
 
 Keyword: tz (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
 
-Keyword: tz &lt;time&gt; - (where time is HH, HHMM or HH:MM) - convert provided time into time of your cities. 
+Keyword: tz &lt;time&gt; - (where &lt;time&gt; is HH, HHMM or HH:MM) - convert provided time into time of your cities.
+
+Keyword: tz &lt;part of city name&gt; - searches for a city in your cities that matches that name and shows the current time.
+
+Keyword: tz &lt;date&gt; &lt;time&gt; - (where &lt;time&gt; is as above and &lt;date&gt; is 'today' [short: 't'], or 'tomorrow' [short: 'tm'], or &lt;number of days&gt;d what means to add the number of days to current date, or one of dd, mmdd, yymmdd, yyyymmdd to give an absolute date) - convert provided date and time into time of your cities.
+
+Keyword: tz &lt;source city&gt; &lt;date&gt; &lt;time&gt; - (where &lt;time&gt; and &lt;date&gt; are as above and &lt;source city&gt; is used to search in your city list) - assumes that date and time is given in the timezone of provided source city and converts it into time of your (other) cities.
 
 Keyword: timezone add [your city] - add your city to the list. (To remove a city, option-select it from the main list.)
 
@@ -756,6 +762,13 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.5
+17 March 2019
+* zero-padding of hours in 24h format (solves #14)
+* no padding of hours in 12h format (solves #14)
+* sorting by favourite, resulting time ascending (that is west to east), city name (solves partly #9)
+* added feature for adjusting source date and timezone (solves #13, #15)
 
 v2.4
 16 December 2018
@@ -1001,7 +1014,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.4</string>
+	<string>2.5</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
