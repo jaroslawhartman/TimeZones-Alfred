@@ -18,7 +18,7 @@ Conversion of a time in your local time to your pre-defined time-zones – “tz
 
 Conversion of a time in a timezone from your list (Warsaw in the sample) with modified date (plus 3 days in the sample):
 
-![Preview 3](demo-2.5.png)
+![Preview 3](img/demo-2.5.png)
 
 ## Commands
 
