@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>carlosnz.timezones</string>
+	<string>carlosnz.timezones2</string>
 	<key>connections</key>
 	<dict>
 		<key>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</key>
@@ -718,8 +718,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.5
-17 March 2019
+	<string>TimeZones v2.6
+11 May 2019
 
 
 
@@ -762,6 +762,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.6
+11 May 2019
+* Updated bundleID in order to sumbit to http://www.packal.org
 
 v2.5
 17 March 2019
@@ -994,7 +998,7 @@ v1.0
 		<key>DBA4F782-B7E9-486E-92A4-D06655FFE839</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>290</integer>
 			<key>ypos</key>
 			<integer>410</integer>
 		</dict>
@@ -1014,7 +1018,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.5</string>
+	<string>2.6</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
