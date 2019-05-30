@@ -718,8 +718,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.6
-11 May 2019
+	<string>TimeZones v2.7
+30 May 2019
 
 
 
@@ -762,6 +762,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.7
+30 May 2019
+* Improved compatiblity with Alfred 4
 
 v2.6
 11 May 2019
@@ -1018,7 +1022,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.6</string>
+	<string>2.7</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>

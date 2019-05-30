@@ -1,14 +1,20 @@
 #includes for TimeZones scripts
 
 #Working Directories
-TZWD="$HOME/Library/Caches/com.runningwithcrayons.Alfred-3/Workflow Data/carlosnz.timezones"
-TZPREFS="$HOME/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones"
+TZPREFS="$alfred_workflow_data"
 
 CONFIG_EXTRA="$TZPREFS/configExtra"
 
+function migratePreferece() {
+	LEGACY_TZPREFS="$HOME/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones"
+	[[ ! -d  "$TZPREFS" ]] && mkdir -p "$TZPREFS" 2>/dev/null
+	[[ ! -e "$TZPREFS/timezones.txt" ]] && cp "$LEGACY_TZPREFS/"* "$TZPREFS/" 2>/dev/null
+	[[ -e "$TZPREFS/config-1-5" ]] && rm "$TZPREFS/config-1-5" 2>/dev/null
+}
+
 function storePreference() {
-   NAME=$1
-   VALUE=$2
+   NAME="$1"
+   VALUE="$2"
    
    grep -v "${NAME}|" "${CONFIG_EXTRA}" > /tmp/timezone.tmp
    
@@ -33,31 +39,20 @@ shopt -s expand_aliases
 #Case-insensitive matching
 shopt -s nocasematch
 
-#First run check
-if [ ! -e "$TZPREFS/config-1-5" ]; then
-	old_timezone_file=$(cat "$TZPREFS/config")
-	mv -f "$old_timezone_file" "$HOME/Desktop/timezones_OLD.txt"
-	
-	mkdir "$TZPREFS"
-	cp default_timezones.txt "$TZPREFS/timezones.txt"
-	rm "$TZPREFS"/config*
-	echo "$TZPREFS/timezones.txt" > "$TZPREFS/config-1-5"
-fi
-
 #Load path to the user's timezones.txt file.
-timezone_file=$(cat "$TZPREFS/config-1-5")
+timezone_file="$TZPREFS/timezones.txt"
+
+migratePreferece
 
 #Does the file actually exist?
 if [ ! -e "$timezone_file" ]; then
 	#If not, recreate it from defaults
-	cp default_timezones.txt "$TZPREFS/timezones.txt"
-	echo "$TZPREFS/timezones.txt" > "$TZPREFS/config-1-5"
-	timezone_file=$(cat )
+	cp default_timezones.txt "$timezone_file"
 fi
 
-if ! grep 'Version2.0' "$TZPREFS/timezones.txt" > /dev/null
+if ! grep 'Version2.0' "$timezone_file" > /dev/null
 then
-	cp default_timezones.txt "$TZPREFS/timezones.txt"
+	cp default_timezones.txt "$timezone_file"
 fi
 
 
