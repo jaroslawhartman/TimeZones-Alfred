@@ -42,9 +42,9 @@ done < "$timezone_file"
 
 if [[ "$selected_fav" == "1" ]]
 then
-    echo "$selected_city has been pinned to the top of your list!"
+    echo "$selected_city has been un-pinned to the top of your list!"
 else
-    echo "$selected_city has been un-pinned from the top of your list!"
+    echo "$selected_city has been pinned from the top of your list!"
 fi
 
 cat "${tmp_timezone_file}" > "${timezone_file}"
