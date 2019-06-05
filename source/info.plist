@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</string>
+				<string>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -24,6 +24,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>66A14357-6BF2-48B9-8B55-A5B426EEE69E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -76,19 +89,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>66A14357-6BF2-48B9-8B55-A5B426EEE69E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -704,22 +704,32 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>echo "$alfred_workflow_data" &gt;&gt; /tmp/zzz
+
+open "$alfred_workflow_data/timezones.txt"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
-				<key>sourcefile</key>
-				<string>~/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones/timezones.txt</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</string>
+			<string>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.7
-30 May 2019
+	<string>TimeZones v2.9
+5 June 2019
 
 
 
@@ -762,6 +772,14 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.9
+5 June 2019
+* Improved compatiblity with Alfred 4 (#19)
+
+v2.8
+31 May 2019
+* Swap the pin/unpin as they were inversed #21
 
 v2.7
 30 May 2019
@@ -908,6 +926,13 @@ v1.0
 			<key>ypos</key>
 			<integer>740</integer>
 		</dict>
+		<key>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>930</integer>
+		</dict>
 		<key>66A14357-6BF2-48B9-8B55-A5B426EEE69E</key>
 		<dict>
 			<key>xpos</key>
@@ -949,13 +974,6 @@ v1.0
 			<integer>500</integer>
 			<key>ypos</key>
 			<integer>250</integer>
-		</dict>
-		<key>9AB5FC3F-42B5-41A5-BC22-C76E4EB10BE3</key>
-		<dict>
-			<key>xpos</key>
-			<integer>490</integer>
-			<key>ypos</key>
-			<integer>930</integer>
 		</dict>
 		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
 		<dict>
@@ -1022,7 +1040,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.7</string>
+	<string>2.9</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
