@@ -62,4 +62,10 @@ if [[ ! -e "${CONFIG_EXTRA}"  ]]; then
 	touch "${CONFIG_EXTRA}"
 fi
 
+#
+# Preferences section
+# 
+# 
+
 TIME_FORMAT=$(getPreference "TIME_FORMAT" "24h" )
+SORTING=$(getPreference "SORTING" "y" )

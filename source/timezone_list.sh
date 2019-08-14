@@ -148,6 +148,8 @@ else
     TIME_FORMAT_STR='%-l:%M %p'
 fi
 
+sortkey=1
+
 while IFS='|' read -r city country timezone country_code telephone_code favourite
     do
 
@@ -189,9 +191,16 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
         flag_icon="_no_flag.png"
     fi
 
-    # we start the output with a sort key to simply pipe the result to 'sort'
-    # we sort first by favourite, second by time ascending, third by city name
-    sortkey=$favourite$(TZ=$timezone date $setTimeOptionArguments +%Y%m%d%H%M )"$city"
+    # It shall be possible to disable sorting
+    # in fact, it means we're assiging an incremaental sort key
+    if [[ ! "$SORTING" == "n" ]]
+    then
+        # we start the output with a sort key to simply pipe the result to 'sort'
+        # we sort first by favourite, second by time ascending, third by city name
+        sortkey=$favourite$(TZ=$timezone date $setTimeOptionArguments +%Y%m%d%H%M )"$city"
+    else   
+        sortkey=$(printf "%03d" $(( $sortkey + 1 )))
+    fi
 
     if [[ "$city" =~ ${city_search:-.} ]]; then
         match=1
