@@ -199,7 +199,7 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
         # we sort first by favourite, second by time ascending, third by city name
         sortkey=$favourite$(TZ=$timezone date $setTimeOptionArguments +%Y%m%d%H%M )"$city"
     else   
-        sortkey=$(printf "%03d" $(( $sortkey + 1 )))
+        sortkey=$(printf "%03d" $(( 10#$sortkey + 1 )))
     fi
 
     if [[ "$city" =~ ${city_search:-.} ]]; then
