@@ -887,7 +887,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.14
+	<string>TimeZones v2.15
 1 September 2019
 
 
@@ -933,6 +933,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.15
+1 September 2019
+* Missing flag for Åland (#29)
 
 v2.14
 1 September 2019
@@ -1255,7 +1259,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.14</string>
+	<string>2.15</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
