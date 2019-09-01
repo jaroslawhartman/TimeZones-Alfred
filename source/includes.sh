@@ -1,14 +1,9 @@
-#includes for TimeZones scripts
-
-#Working Directories
-TZPREFS="$alfred_workflow_data"
-
-CONFIG_EXTRA="$TZPREFS/configExtra"
+#!/usr/bin/env bash
 
 function migratePreferece() {
 	LEGACY_TZPREFS="$HOME/Library/Application Support/Alfred 3/Workflow Data/carlosnz.timezones"
 	[[ ! -d  "$TZPREFS" ]] && mkdir -p "$TZPREFS" 2>/dev/null
-	[[ ! -e "$TZPREFS/timezones.txt" ]] && cp "$LEGACY_TZPREFS/"* "$TZPREFS/" 2>/dev/null
+	[[ ! -e "$timezone_file" ]] && cp "$LEGACY_TZPREFS/"* "$TZPREFS/" 2>/dev/null
 	[[ -e "$TZPREFS/config-1-5" ]] && rm "$TZPREFS/config-1-5" 2>/dev/null
 }
 
@@ -33,14 +28,23 @@ function getPreference() {
    echo "$VALUE"
 }
 
+#Working Directories
+#includes for TimeZones scripts
+TZPREFS="$alfred_workflow_data"
+CONFIG_EXTRA="$TZPREFS/configExtra"
+TIMEZONE_PATH="$(getPreference 'TIMEZONE_PATH' "$TZPREFS" )"
+
+#Load path to the user's timezones.txt file.
+timezone_file="$TIMEZONE_PATH/timezones.txt"
+
+# echo "$TIMEZONE_PATH" >> /tmp/bzz
+# ls -l "$TIMEZONE_PATH" >> /tmp/bzz
+
 #Enable aliases for this script
 shopt -s expand_aliases
 
 #Case-insensitive matching
 shopt -s nocasematch
-
-#Load path to the user's timezones.txt file.
-timezone_file="$TZPREFS/timezones.txt"
 
 migratePreferece
 

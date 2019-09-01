@@ -721,7 +721,7 @@
 				<key>subtext</key>
 				<string>Results will not be sorted and will follow order from timezones.txt</string>
 				<key>text</key>
-				<string>Disable result ordering</string>
+				<string>Disable result sorting</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -807,9 +807,9 @@
 				<key>keyword</key>
 				<string>timezone sort on</string>
 				<key>subtext</key>
-				<string>Results will not sorted with Favourites on the top</string>
+				<string>Results will be sorted with Favourites on the top</string>
 				<key>text</key>
-				<string>Enable result ordering</string>
+				<string>Enable result sorting</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -887,8 +887,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.13
-14 August 2019
+	<string>TimeZones v2.14
+1 September 2019
 
 
 
@@ -933,6 +933,11 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+v2.14
+1 September 2019
+* Reverted handling of Dropbox timezones.txt (#23)
+* Asking wheither override when an existing timezones.txt in the new location (#27)
 
 v2.13
 26 August 2019
@@ -1250,7 +1255,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.13</string>
+	<string>2.14</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
