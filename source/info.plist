@@ -58,6 +58,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>576752B3-B93B-49C1-8E41-B0E31110799B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>600941C7-2A17-46A0-ABD4-C1568FBA7DBD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7C2B2778-8AEE-4861-9E54-DD7E3C7B49F7</key>
 		<array>
 			<dict>
@@ -88,7 +114,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
+				<string>576752B3-B93B-49C1-8E41-B0E31110799B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -123,6 +149,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>BC542037-8795-4FE1-8534-AF381F4197FC</key>
+		<array/>
 		<key>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</key>
 		<array>
 			<dict>
@@ -227,6 +255,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>ECAFAB55-5A45-4C0D-9578-3B43945E6B61</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>600941C7-2A17-46A0-ABD4-C1568FBA7DBD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
 		<array>
 			<dict>
@@ -288,7 +329,7 @@
 			<key>config</key>
 			<dict>
 				<key>largetypetext</key>
-				<string>{query}</string>
+				<string>{query} (copied to clipboard)</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.largetype</string>
@@ -370,6 +411,23 @@
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>576752B3-B93B-49C1-8E41-B0E31110799B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -714,6 +772,50 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>./changeParameter.sh "TIME_FORMAT" "Both"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>600941C7-2A17-46A0-ABD4-C1568FBA7DBD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone both</string>
+				<key>subtext</key>
+				<string>Change displayed time format to hybrid, e.g. 14:30 (2:30 pm)</string>
+				<key>text</key>
+				<string>Change time format to both 24 and 12h (am/pm)</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>ECAFAB55-5A45-4C0D-9578-3B43945E6B61</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -887,7 +989,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.15
+	<string>TimeZones v2.16
 1 September 2019
 
 
@@ -933,6 +1035,14 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+2.16
+16 August 2020
+* Pull Request Fix incorrect City -&gt; Country mapping #35
+* Converted time copied to Clipboard after hitting Enter
+* Added hybrid time format: 24hr (12hr), i.e. 14:30 (2:30 pm). Change using 'timezone both'
+* #22, #25: Support for UTC timezone (timezone add utc)
+
 
 v2.15
 1 September 2019
@@ -1101,7 +1211,7 @@ v1.0
 			<key>xpos</key>
 			<integer>290</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1160</integer>
 		</dict>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
 		<dict>
@@ -1123,6 +1233,20 @@ v1.0
 			<integer>490</integer>
 			<key>ypos</key>
 			<integer>1280</integer>
+		</dict>
+		<key>576752B3-B93B-49C1-8E41-B0E31110799B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>600941C7-2A17-46A0-ABD4-C1568FBA7DBD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>920</integer>
 		</dict>
 		<key>66A14357-6BF2-48B9-8B55-A5B426EEE69E</key>
 		<dict>
@@ -1150,7 +1274,7 @@ v1.0
 			<key>xpos</key>
 			<integer>690</integer>
 			<key>ypos</key>
-			<integer>920</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>8FB97B65-0E08-4EC2-A78E-EB05887599EF</key>
 		<dict>
@@ -1183,7 +1307,7 @@ v1.0
 		<key>BC542037-8795-4FE1-8534-AF381F4197FC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>890</integer>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
@@ -1213,7 +1337,7 @@ v1.0
 			<key>xpos</key>
 			<integer>490</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1160</integer>
 		</dict>
 		<key>D8D3E88A-E982-4F27-B3AA-46DAD6C5D87F</key>
 		<dict>
@@ -1234,7 +1358,7 @@ v1.0
 			<key>xpos</key>
 			<integer>290</integer>
 			<key>ypos</key>
-			<integer>920</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
 		<dict>
@@ -1242,6 +1366,13 @@ v1.0
 			<integer>490</integer>
 			<key>ypos</key>
 			<integer>560</integer>
+		</dict>
+		<key>ECAFAB55-5A45-4C0D-9578-3B43945E6B61</key>
+		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>920</integer>
 		</dict>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
 		<dict>
@@ -1255,11 +1386,11 @@ v1.0
 			<key>xpos</key>
 			<integer>490</integer>
 			<key>ypos</key>
-			<integer>920</integer>
+			<integer>1040</integer>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.15</string>
+	<string>2.16</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>

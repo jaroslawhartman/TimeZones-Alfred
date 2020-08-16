@@ -143,10 +143,16 @@ match=0		#use to determine if there are any matches to the current query in Alfr
 
 if [[ "$TIME_FORMAT" = "24h" ]]; then
     TIME_FORMAT_STR='%0k:%M'
+fi
 
-else
+if [[ "$TIME_FORMAT" = "12h" ]]; then
     TIME_FORMAT_STR='%-l:%M %p'
 fi
+
+if [[ "$TIME_FORMAT" = "Both" ]]; then
+    # Both - 24hr (12hr)
+    TIME_FORMAT_STR='%0k:%M (%-l:%M %p)'
+fi 
 
 sortkey=1
 
@@ -159,9 +165,11 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
         continue
     fi
 
-    if [ -n "$telephone_code" ]
+    if [[ -n "$telephone_code" ]]
     then
         telephone_code_string=" (+$telephone_code)"
+    else
+        telephone_code_string=""
     fi
 
     if [[ "$favourite" == "0" ]]
@@ -184,10 +192,10 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
     city_date=$(TZ=$timezone date $setTimeOptionArguments +"%A, %d %B %Y" )
 
     #Determine flag icon
-    country_flag=$(echo "$country" | tr '[A-Z]' '[a-z]')
-    country_flag=${country_flag// /_}
-    flag_icon=$country_flag.png
-    if [ ! -e ./flags/$flag_icon ]; then
+    country_flag="$(echo "$country" | tr '[A-Z]' '[a-z]')"
+    country_flag="${country_flag// /_}"
+    flag_icon="$country_flag.png"
+    if [[ ! -e "./flags/$flag_icon" ]]; then
         flag_icon="_no_flag.png"
     fi
 
