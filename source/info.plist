@@ -328,15 +328,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
 				<key>largetypetext</key>
 				<string>{query} (copied to clipboard)</string>
+				<key>textcolor</key>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.largetype</string>
 			<key>uid</key>
 			<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -345,6 +357,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -383,7 +397,7 @@
 			<key>uid</key>
 			<string>F15F2405-5743-4407-9BFF-A45E6783BA88</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -429,7 +443,7 @@
 			<key>uid</key>
 			<string>576752B3-B93B-49C1-8E41-B0E31110799B</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -551,6 +565,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -591,7 +607,7 @@
 			<key>uid</key>
 			<string>DBA4F782-B7E9-486E-92A4-D06655FFE839</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -989,9 +1005,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.16
-1 September 2019
-
+	<string>TimeZones v2.17
+18 August 2020
 
 
 =====
@@ -1035,6 +1050,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+2.17
+18 August 2020
+* #26 - Added support for AoE
 
 2.16
 16 August 2020
@@ -1389,8 +1408,10 @@ v1.0
 			<integer>1040</integer>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>2.16</string>
+	<string>2.17</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
