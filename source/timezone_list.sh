@@ -188,8 +188,18 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
     
     setTimeOptionArguments="-jf %Y%m%d%H%M%S%z $dateToConvert$timeToConvert$timezoneOffsetToConvert"
 
-    city_time=$(TZ=$timezone date $setTimeOptionArguments +"$TIME_FORMAT_STR")
-    city_date=$(TZ=$timezone date $setTimeOptionArguments +"%A, %d %B %Y" )
+    # UTC hours needs swap the sign (minus)->(plus) and vice-versa
+
+    if [[ "$timezone" == *UTC-* ]]
+    then   
+        timezoneOpposite="${timezone/-/+}"
+    elif [[ "$timezone" == *UTC+* ]]
+    then
+            timezoneOpposite="${timezone/+/-}"
+    fi
+
+    city_time=$(TZ=$timezoneOpposite date $setTimeOptionArguments +"$TIME_FORMAT_STR")
+    city_date=$(TZ=$timezoneOpposite date $setTimeOptionArguments +"%A, %d %B %Y" )
 
     #Determine flag icon
     country_flag="$(echo "$country" | tr '[A-Z]' '[a-z]')"
