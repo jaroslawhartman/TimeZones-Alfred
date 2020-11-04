@@ -189,6 +189,7 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
     setTimeOptionArguments="-jf %Y%m%d%H%M%S%z $dateToConvert$timeToConvert$timezoneOffsetToConvert"
 
     # UTC hours needs swap the sign (minus)->(plus) and vice-versa
+    timezoneOpposite="$timezone"
 
     if [[ "$timezone" == *UTC-* ]]
     then   

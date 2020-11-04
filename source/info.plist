@@ -1009,8 +1009,8 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.19
-18 August 2020
+	<string>TimeZones v2.20
+4 November 2020
 
 
 =====
@@ -1054,6 +1054,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+2.20
+4 November 2020
+* Fix for regression #39
 
 2.19
 2 November 2020
@@ -1422,7 +1426,7 @@ v1.0
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.18</string>
+	<string>2.20</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
