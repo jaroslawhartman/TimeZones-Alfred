@@ -22,6 +22,12 @@ Conversion of a time in a timezone from your list (Warsaw in the sample) with mo
 
 ![Preview 3](img/demo-2.5.png)
 
+### UTC Support
+
+You can add UTC zones: just search the zone using keyword `timezone add universal` or `timezone add coordinated`:
+
+![Preview 4](https://user-images.githubusercontent.com/964833/114501067-8aba7600-9c29-11eb-9b49-2e2e255920bd.png)
+
 ## Commands
 
 * **Keyword**: *tz* (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
