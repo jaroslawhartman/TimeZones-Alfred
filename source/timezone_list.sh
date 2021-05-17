@@ -12,6 +12,7 @@ search="$1"	#Alfred argument
 # HH (assume minutes to be zero)
 # HH:MM
 # HHMM
+# and also an a, m, am, or pm modifier:
 
 # <date modification> can have following formats:
 # t (short for today)
@@ -101,7 +102,15 @@ fi
 #
 # create source time
 #
-if [[ $time_search =~ ^[0-9:]+$ ]] ; then
+if [[ $time_search =~ ^[0-9:]+(am|pm|a|p)?$ ]] ; then
+
+    # set is_pm flag if p char is present
+    echo $time_search | grep -iqF p && is_pm=true || is_pm=false
+
+    # remove a, am, p, and pm
+    time_search=${time_search%"m"}
+    time_search=${time_search%"p"}
+    time_search=${time_search%"a"}
 
     # HH
     if [[ $time_search =~ ^[0-9]{2}$ ]]; then
@@ -119,6 +128,14 @@ if [[ $time_search =~ ^[0-9:]+$ ]] ; then
     if [[ $time_search =~ ^[0-9]{1}\: ]]; then
         #echo "1 digit" >> /tmp/alfred.txt
         time_search=0${time_search}
+    fi
+
+    # add 12 hours if is_pm flag is true
+    if [ "$is_pm" = true ]; then
+        hours=$(echo $time_search | cut -c1-2)
+        minutes=$(echo $time_search | cut -c3-)
+        adjusted_hours="$((hours + 12))"
+        time_search="$adjusted_hours$minutes"
     fi    
     
     # pad seconds
