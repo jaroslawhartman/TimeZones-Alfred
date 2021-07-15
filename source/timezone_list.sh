@@ -49,29 +49,14 @@ else
 fi
 
 #
-# create source timezone
-#
-if [ -n "$source_timezone_search" ]
-then
-    #timezoneToConvert=$(find /usr/share/zoneinfo.default -iname "*${source_timezone_search}*" | head -1 )
-    #timezoneToConvert=${timezoneToConvert:28}
-    timezoneToConvert=$(cat "$timezone_file" | awk -v query="$source_timezone_search" -F'|' 'tolower($1) ~ tolower(query) {print $3}' )
-    if [ -n "$timezoneToConvert" ]
-    then
-        timezoneOffsetToConvert=$(TZ=$timezoneToConvert date +%z)
-    fi
-fi
-if [ -z "$timezoneOffsetToConvert" ]
-then
-    timezoneOffsetToConvert=$(date +%z)
-fi
-
-#
 # create source date
 #
 if [ 'tm' = "$date_modification_search" -o 'tomorrow' = "$date_modification_search" ]
 then
     dateToConvert=$(date -v +1d +%Y%m%d)
+elif [ 't' = "$date_modification_search" -o 'today' = "$date_modification_search" ]
+then
+    dateToConvert=$(date +%Y%m%d)
 elif [[ "$date_modification_search" =~ ^[0-9]+d$ ]]
 then
     dateToConvert=$(date -v +${date_modification_search} +%Y%m%d)
@@ -94,8 +79,28 @@ elif [[ "$date_modification_search" =~ ^[0-9]{8}$ ]]
 then
     dateToConvert=$(date -v ${date_modification_search:0:4}y -v ${date_modification_search:4:2}m -v ${date_modification_search:6}d +%Y%m%d)
 else
-    # fallback that also covers 't' and 'today'
+    # fallback uses today, but also tries to use first argument as a source timezone
     dateToConvert=$(date +%Y%m%d)
+    source_timezone_search=${date_modification_search}
+    unset date_modification_search
+fi
+
+#
+# create source timezone
+#
+if [ -n "$source_timezone_search" ]
+then
+    #timezoneToConvert=$(find /usr/share/zoneinfo.default -iname "*${source_timezone_search}*" | head -1 )
+    #timezoneToConvert=${timezoneToConvert:28}
+    timezoneToConvert=$(cat "$timezone_file" | awk -v query="$source_timezone_search" -F'|' 'tolower($1) ~ tolower(query) {print $3}' )
+    if [ -n "$timezoneToConvert" ]
+    then
+        timezoneOffsetToConvert=$(TZ=$timezoneToConvert date +%z)
+    fi
+fi
+if [ -z "$timezoneOffsetToConvert" ]
+then
+    timezoneOffsetToConvert=$(date +%z)
 fi
 
 #
