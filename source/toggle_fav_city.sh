@@ -2,8 +2,11 @@ source includes.sh
 
 search="$1"	#Alfred argument
 
-# Strip off time, e.g. in New York, 7:20
-search="${search/,*/}"
+# searchip off time, e.g. in New York, 7:20
+# searching passed: 7:20 (New York)
+# extract City from the braces
+search=${search#*(}
+search=${search%)*}
 
 tmp_timezone_file="${timezone_file}.tmp"
 
