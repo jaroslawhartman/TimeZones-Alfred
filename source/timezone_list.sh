@@ -221,10 +221,17 @@ while IFS='|' read -r city country timezone country_code telephone_code favourit
         sortkey=$(printf "%03d" $(( 10#$sortkey + 1 )))
     fi
 
+    if [[ "$CLIPBOARD_DATE" == "Off" ]]
+    then
+        ITEM_ARG="$city_time ($city)"
+    else
+        ITEM_ARG="$city_date, $city_time ($city)"
+    fi
+
     if [[ "$city" =~ ${city_search:-.} ]]; then
         match=1
         echo "<!--$sortkey-->\
-              <item arg=\"$city, $city_time\" valid=\"yes\">\
+              <item arg=\"$ITEM_ARG\" valid=\"yes\">\
                   <title>$sourceTimezone_string$city: $city_time</title>\
                   <subtitle>$favourite_string on $city_date • ${country}${telephone_code_string} • Timezone: $timezone</subtitle>\
                   <icon>./flags/$flag_icon</icon>\

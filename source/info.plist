@@ -32,6 +32,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>1D3CFF49-189F-40D4-84D2-3E1CF2CD327D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9737C471-5FA4-4C09-B97F-D225CA0F53EE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2AA6A4A0-7F5B-4F76-806D-63B70DB46720</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9737C471-5FA4-4C09-B97F-D225CA0F53EE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
 		<array>
 			<dict>
@@ -62,7 +88,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
+				<string>E9C3767A-C20A-4934-BB66-83416A567C96</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -76,6 +102,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>756CDEC2-B2E6-491A-9712-44819056A9D2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2AA6A4A0-7F5B-4F76-806D-63B70DB46720</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -149,8 +188,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>BC542037-8795-4FE1-8534-AF381F4197FC</key>
-		<array/>
 		<key>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</key>
 		<array>
 			<dict>
@@ -182,6 +219,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>C0EA86FF-9C54-4A0D-B7A5-3ED5CA9F5675</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C50EC754-EFDC-4446-BEA5-7EE6C10D33D5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1D3CFF49-189F-40D4-84D2-3E1CF2CD327D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -328,29 +378,54 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alignment</key>
-				<integer>0</integer>
-				<key>backgroundcolor</key>
-				<string></string>
-				<key>fadespeed</key>
-				<integer>0</integer>
-				<key>fillmode</key>
-				<integer>0</integer>
-				<key>font</key>
-				<string></string>
-				<key>ignoredynamicplaceholders</key>
+				<key>concurrently</key>
 				<false/>
-				<key>largetypetext</key>
-				<string>{query} (copied to clipboard)</string>
-				<key>textcolor</key>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>echo "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.largetype</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>BC542037-8795-4FE1-8534-AF381F4197FC</string>
+			<string>942CCE71-9883-4AB2-A558-B5A44993DF3B</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -404,35 +479,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -452,25 +498,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>echo "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Time copied to clipboard!</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>942CCE71-9883-4AB2-A558-B5A44993DF3B</string>
+			<string>E9C3767A-C20A-4934-BB66-83416A567C96</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Timezones</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -494,27 +559,6 @@
 			<string>AAA84F5F-2F96-4126-A840-9CD676BDD208</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Timezones</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>075CB49C-D3B5-4699-9B92-B421D704333D</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -616,6 +660,50 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone date on</string>
+				<key>subtext</key>
+				<string>Output format "Tuesday, 09 February 2021, 14:51 (Warsaw)"</string>
+				<key>text</key>
+				<string>Clipboard info with date</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C50EC754-EFDC-4446-BEA5-7EE6C10D33D5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>./changeParameter.sh "CLIPBOARD_DATE" "On"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1D3CFF49-189F-40D4-84D2-3E1CF2CD327D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -632,7 +720,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>8FB97B65-0E08-4EC2-A78E-EB05887599EF</string>
+			<string>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -676,9 +764,30 @@
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</string>
+			<string>8FB97B65-0E08-4EC2-A78E-EB05887599EF</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Data format copied to clipboard changed.</string>
+				<key>title</key>
+				<string>TImeZones</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>9737C471-5FA4-4C09-B97F-D225CA0F53EE</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -686,20 +795,43 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>timezone 24h</string>
+				<string>timezone date off</string>
 				<key>subtext</key>
-				<string>Change displayed time format to 24h (e.g. 15:00)</string>
+				<string>Output format "14:51 (Warsaw)"</string>
 				<key>text</key>
-				<string>Change time format to 24h</string>
+				<string>Clipboard info without date</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>C30DCDAB-4A04-4B8C-8DBD-2BEF53E15F31</string>
+			<string>756CDEC2-B2E6-491A-9712-44819056A9D2</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>./changeParameter.sh "CLIPBOARD_DATE" "Off"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2AA6A4A0-7F5B-4F76-806D-63B70DB46720</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -723,6 +855,27 @@
 			<string>C0EA86FF-9C54-4A0D-B7A5-3ED5CA9F5675</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone 24h</string>
+				<key>subtext</key>
+				<string>Change displayed time format to 24h (e.g. 15:00)</string>
+				<key>text</key>
+				<string>Change time format to 24h</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C30DCDAB-4A04-4B8C-8DBD-2BEF53E15F31</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -836,27 +989,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>timezone sort off</string>
-				<key>subtext</key>
-				<string>Results will not be sorted and will follow order from timezones.txt</string>
-				<key>text</key>
-				<string>Disable result sorting</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>E3AE529B-21B7-4E17-A447-94A184AF6066</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -872,6 +1004,27 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>8681E6DB-55BB-4796-BE89-9BD5551E64BF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone sort off</string>
+				<key>subtext</key>
+				<string>Results will not be sorted and will follow order from timezones.txt</string>
+				<key>text</key>
+				<string>Disable result sorting</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E3AE529B-21B7-4E17-A447-94A184AF6066</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -945,23 +1098,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>timezone edit</string>
-				<key>subtext</key>
-				<string>You can edit your configuration file</string>
-				<key>text</key>
-				<string>Edit file with defined cities</string>
-				<key>withspace</key>
+				<key>concurrently</key>
 				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>open "$alfred_workflow_data/timezones.txt"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</string>
+			<string>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -987,31 +1142,28 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone edit</string>
+				<key>subtext</key>
+				<string>You can edit your configuration file</string>
+				<key>text</key>
+				<string>Edit file with defined cities</string>
+				<key>withspace</key>
 				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>open "$alfred_workflow_data/timezones.txt"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</string>
+			<string>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.20
-4 November 2020
-
+	<string>TimeZones v2.41
+2 November 2022
 
 =====
 USAGE
@@ -1054,6 +1206,24 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+2.41
+2 November 2022
+* Fixed Option + Enter does not remove a locale #51
+
+2.40
+9 October 2021
+* Toggle Fav List Does not Work #49
+
+
+2.30
+9 February 2021
+* Big banner on copy changed to to MacOS notification #45
+* Changed format of text copied to clipboard (after pressing Enter) - now it's more compact "14:42 (Warsaw)" #45
+* Option to change time format copied to clipboard #45
+* Added flag for Bonaire #31
+
+
 
 2.20
 4 November 2020
@@ -1231,202 +1401,239 @@ v1.0
 		<key>075CB49C-D3B5-4699-9B92-B421D704333D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<real>700</real>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>16D7BCC0-AD0A-49B7-98F2-5FC3444910B1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<real>1280</real>
 		</dict>
 		<key>1A535FEC-66A2-47AD-9B58-99755BEE3DAA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<real>1160</real>
+		</dict>
+		<key>1D3CFF49-189F-40D4-84D2-3E1CF2CD327D</key>
+		<dict>
+			<key>xpos</key>
+			<real>1055</real>
+			<key>ypos</key>
+			<real>530</real>
+		</dict>
+		<key>2AA6A4A0-7F5B-4F76-806D-63B70DB46720</key>
+		<dict>
+			<key>xpos</key>
+			<real>1050</real>
+			<key>ypos</key>
+			<real>655</real>
 		</dict>
 		<key>3E37F651-EEB7-451F-B0AD-28710998F443</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>410</integer>
+			<real>410</real>
 		</dict>
 		<key>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>690</integer>
+			<real>690</real>
 			<key>ypos</key>
-			<integer>740</integer>
+			<real>740</real>
 		</dict>
 		<key>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<real>1280</real>
 		</dict>
 		<key>576752B3-B93B-49C1-8E41-B0E31110799B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<real>700</real>
 			<key>ypos</key>
-			<integer>10</integer>
+			<real>15</real>
 		</dict>
 		<key>600941C7-2A17-46A0-ABD4-C1568FBA7DBD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>920</integer>
+			<real>920</real>
 		</dict>
 		<key>66A14357-6BF2-48B9-8B55-A5B426EEE69E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>690</integer>
+			<real>690</real>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<real>1280</real>
+		</dict>
+		<key>756CDEC2-B2E6-491A-9712-44819056A9D2</key>
+		<dict>
+			<key>xpos</key>
+			<real>850</real>
+			<key>ypos</key>
+			<real>655</real>
 		</dict>
 		<key>7C2B2778-8AEE-4861-9E54-DD7E3C7B49F7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>800</integer>
+			<real>800</real>
 		</dict>
 		<key>814F7D3F-03F9-4248-8308-ECA4D3792F3F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>560</integer>
+			<real>560</real>
 		</dict>
 		<key>8681E6DB-55BB-4796-BE89-9BD5551E64BF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>690</integer>
+			<real>690</real>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<real>1040</real>
 		</dict>
 		<key>8FB97B65-0E08-4EC2-A78E-EB05887599EF</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>560</integer>
+			<real>560</real>
 		</dict>
 		<key>942CCE71-9883-4AB2-A558-B5A44993DF3B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<real>500</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
+		</dict>
+		<key>9737C471-5FA4-4C09-B97F-D225CA0F53EE</key>
+		<dict>
+			<key>xpos</key>
+			<real>1250</real>
+			<key>ypos</key>
+			<real>590</real>
 		</dict>
 		<key>9740FE97-5B7D-4D30-9EF3-5D845C5CA7DC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<real>500</real>
 			<key>ypos</key>
-			<integer>250</integer>
+			<real>250</real>
 		</dict>
 		<key>AAA84F5F-2F96-4126-A840-9CD676BDD208</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<real>500</real>
 			<key>ypos</key>
 			<real>120</real>
-		</dict>
-		<key>BC542037-8795-4FE1-8534-AF381F4197FC</key>
-		<dict>
-			<key>xpos</key>
-			<integer>890</integer>
-			<key>ypos</key>
-			<integer>10</integer>
 		</dict>
 		<key>BD27CF53-3880-47C9-9AAC-4B443E7BA1BD</key>
 		<dict>
 			<key>xpos</key>
-			<integer>100</integer>
+			<real>100</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 		<key>C0EA86FF-9C54-4A0D-B7A5-3ED5CA9F5675</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>680</integer>
+			<real>680</real>
 		</dict>
 		<key>C30DCDAB-4A04-4B8C-8DBD-2BEF53E15F31</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>680</integer>
+			<real>680</real>
+		</dict>
+		<key>C50EC754-EFDC-4446-BEA5-7EE6C10D33D5</key>
+		<dict>
+			<key>xpos</key>
+			<real>855</real>
+			<key>ypos</key>
+			<real>530</real>
 		</dict>
 		<key>C9B8E082-CCA2-4C0B-9B4F-501369C0B4DA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<real>1160</real>
 		</dict>
 		<key>D8D3E88A-E982-4F27-B3AA-46DAD6C5D87F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>800</integer>
+			<real>800</real>
 		</dict>
 		<key>DBA4F782-B7E9-486E-92A4-D06655FFE839</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>410</integer>
+			<real>410</real>
 		</dict>
 		<key>E3AE529B-21B7-4E17-A447-94A184AF6066</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<real>1040</real>
 		</dict>
 		<key>E8F7A1D7-00B7-44A7-9C43-3AFA322C666E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>560</integer>
+			<real>560</real>
+		</dict>
+		<key>E9C3767A-C20A-4934-BB66-83416A567C96</key>
+		<dict>
+			<key>xpos</key>
+			<real>895</real>
+			<key>ypos</key>
+			<real>15</real>
 		</dict>
 		<key>ECAFAB55-5A45-4C0D-9578-3B43945E6B61</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>920</integer>
+			<real>920</real>
 		</dict>
 		<key>F15F2405-5743-4407-9BFF-A45E6783BA88</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<real>300</real>
 			<key>ypos</key>
-			<real>10</real>
+			<real>15</real>
 		</dict>
 		<key>F8514F2E-D28D-4DC7-A39C-D2B71716F48C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>490</real>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<real>1040</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>version</key>
-	<string>2.20</string>
+	<string>2.41</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
