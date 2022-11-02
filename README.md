@@ -39,6 +39,7 @@ You can add UTC zones: just search the zone using keyword `timezone add universa
 * **Keyword**: *timezone edit* - open for edit of cities file.
 * **Keyword**: *timezone move* - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).
 * **Keyword**: *timezone 12h*, *timezone 24h* - change format of displayed time.
+* **Keyword**: *timezone upgrade* - check for a new version
 
 ## Keyboard shortcuts
 
@@ -46,15 +47,24 @@ You can add UTC zones: just search the zone using keyword `timezone add universa
 * *Command + Enter* - pin/unpin the city from the top of the list.
 ![mymovie](https://user-images.githubusercontent.com/964833/48945347-429c3b00-ef2a-11e8-84f9-3fabe8814c8c.gif)
 
-## Installation steps
+## Installation
 
 1. Install Alfred
 2. Purchase premium version of Alfred to enable Workflows
 3. Download latest ZIP file from [releases](https://github.com/jaroslawhartman/TimeZones-Alfred/releases)
 4. Unzip and double click to add to Alfred
 
+## Upgrades
+
+Starting from version 2.50 the workflow uses OneUpdater framework for automatic upgrades. Every 7 days the workflow checks for a new version and downloads if an update found.
+
+Manual check can be triggered with *timezone upgrade*:
+![Upgrade](img/Update.png)
+
+
 ## References
 
-* GeoIP2 City and Country CSV Databases: https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/
-* Flag icons from: http://www.free-country-flags.com (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
-* Icon design by Logo Open Stock (modified from original) http://www.logoopenstock.com
+* GeoIP2 City and Country CSV Databases: [https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/)
+* Flag icons from: [http://www.free-country-flags.com](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/) (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
+* Icon design by Logo Open Stock (modified from original) [http://www.logoopenstock.com](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/)
+* OneUpdater [https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/)
