@@ -71,6 +71,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>408AA1A8-69F7-45E1-AF88-D3B90A40A00E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CAFFEE63-507B-4755-ADDC-20AFDF0CE87E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4D7626AC-9354-4ABF-B95D-9224BCC91DDA</key>
 		<array>
 			<dict>
@@ -431,7 +444,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -453,9 +466,10 @@
 				<key>queuemode</key>
 				<integer>1</integer>
 				<key>runningsubtext</key>
-				<string>Fetching time data...</string>
+				<string>Fetchinig timiezones or checking for an upgrade...</string>
 				<key>script</key>
-				<string>./timezone_list.sh "{query}"</string>
+				<string>./oneUpdater.sh 7
+./timezone_list.sh "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1160,9 +1174,53 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>timezone upgrade</string>
+				<key>subtext</key>
+				<string>Normall, new versions are checked every 7 days</string>
+				<key>text</key>
+				<string>Check for a newer version</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>408AA1A8-69F7-45E1-AF88-D3B90A40A00E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>./oneUpdater.sh 0</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CAFFEE63-507B-4755-ADDC-20AFDF0CE87E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones v2.41
+	<string>TimeZones
 2 November 2022
 
 =====
@@ -1206,6 +1264,10 @@ CHANGELOG
 =========
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
+
+2.50
+2 November 2022
+* Automatised upgrades #46
 
 2.41
 2 November 2022
@@ -1440,6 +1502,13 @@ v1.0
 			<key>ypos</key>
 			<real>410</real>
 		</dict>
+		<key>408AA1A8-69F7-45E1-AF88-D3B90A40A00E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>290</integer>
+			<key>ypos</key>
+			<integer>1405</integer>
+		</dict>
 		<key>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</key>
 		<dict>
 			<key>xpos</key>
@@ -1573,6 +1642,13 @@ v1.0
 			<key>ypos</key>
 			<real>1160</real>
 		</dict>
+		<key>CAFFEE63-507B-4755-ADDC-20AFDF0CE87E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>495</integer>
+			<key>ypos</key>
+			<integer>1405</integer>
+		</dict>
 		<key>D8D3E88A-E982-4F27-B3AA-46DAD6C5D87F</key>
 		<dict>
 			<key>xpos</key>
@@ -1630,10 +1706,10 @@ v1.0
 			<real>1040</real>
 		</dict>
 	</dict>
-	<key>userconfigurationconfig</key>
+	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>2.41</string>
+	<string>2.50</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
