@@ -56,7 +56,9 @@ You can add UTC zones: just search the zone using keyword `timezone add universa
 
 ## Upgrades
 
-Starting from version 2.50 the workflow uses OneUpdater framework for automatic upgrades. Every 7 days the workflow checks for a new version and downloads if an update found.
+Starting from version 2.50 the workflow uses OneUpdater framework for automatic upgrades. 
+
+Every time when invoking 'tz' command, the workflow checks for a new version and downloads if an update found. Automatic check are performed every 7 days.
 
 Manual check can be triggered with *timezone upgrade*:
 ![Upgrade](img/Update.png)
