@@ -1,5 +1,5 @@
 #Version2.0
-London|United Kingdom|Europe/London|GB|44|1
-New Delhi|India|Asia/Kolkata|IN|91|1
-New York|United States|America/New_York|US|1|1
-Warsaw|Poland|Europe/Warsaw|PL|48|1
+London|United Kingdom|Europe/London|GB|1
+New Delhi|India|Asia/Kolkata|IN|1
+New York|United States|America/New_York|US|1
+Warsaw|Poland|Europe/Warsaw|PL|1

@@ -21,9 +21,8 @@ while IFS= read -r line
 	city="${data[0]}"
 	country="${data[1]}"
 	timezone="${data[2]}"
-    country_abbr="${data[3]}"
-	country_code="${data[4]}"
-	favourite="${data[5]}"
+	country_code="${data[3]}"
+	favourite="${data[4]}"
 
     if [[ -z "${favourite}" ]]; then
         favourite="1"
@@ -39,7 +38,7 @@ while IFS= read -r line
         selected_fav="$favourite"
     fi
 
-    echo "$city|$country|$timezone|$country_abbr|$country_code|$favourite" >> "${tmp_timezone_file}"
+    echo "$city|$country|$timezone|$country_code|$favourite" >> "${tmp_timezone_file}"
 
 done < "$timezone_file"
 
