@@ -67,6 +67,6 @@ Manual check can be triggered with *timezone upgrade*:
 ## References
 
 * GeoIP2 City and Country CSV Databases: [https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/)
-* Flag icons from: [http://www.free-country-flags.com](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/) (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
-* Icon design by Logo Open Stock (modified from original) [http://www.logoopenstock.com](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/)
-* OneUpdater [https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater](https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/)
+* Flag icons from: [http://www.free-country-flags.com](http://www.free-country-flags.com) (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
+* Icon design by Logo Open Stock (modified from original) [http://www.logoopenstock.com](http://www.logoopenstock.com)
+* OneUpdater [https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater](https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater)
