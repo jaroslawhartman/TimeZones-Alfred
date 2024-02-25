@@ -444,7 +444,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<true/>
+				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -1220,173 +1220,155 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>TimeZones
-2 November 2022
+	<string># TimeZones
+Latst update: 25 February 2024
 
-=====
-USAGE
-=====
+# USAGE
 
-Keyword: tz (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
+## Keywords
 
-Keyword: tz &lt;time&gt; - (where &lt;time&gt; is HH, HHMM or HH:MM) - convert provided time into time of your cities.
+ * `tz` (or hotkey) - bring up the list of saved cities with their respective current times. (Keep typing the name of a place for a one-off lookup.)
+ * `tz &lt;time&gt;` - (where &lt;time&gt; is HH, HHMM or HH:MM) - convert provided time into time of your cities.
+ * `tz &lt;part of city name&gt;` - searches for a city in your cities that matches that name and shows the current time.
+ * `tz &lt;date&gt; &lt;time&gt;` - (where &lt;time&gt; is as above and &lt;date&gt; is 'today' [short: 't'], or 'tomorrow' [short: 'tm'], or &lt;number of days&gt;d what means to add the number of days to current date, or one of dd, mmdd, yymmdd, yyyymmdd to give an absolute date) - convert provided date and time into time of your cities.
+ * `tz &lt;source city&gt; &lt;date&gt; &lt;time&gt;` - (where &lt;time&gt; and &lt;date&gt; are as above and &lt;source city&gt; is used to search in your city list) - assumes that date and time is given in the timezone of provided source city and converts it into time of your (other) cities.
+ * `timezone add [your city]` - add your city to the list. (To remove a city, option-select it from the main list.)
+ * `timezone edit` - open for edit of cities file.
+ * `timezone move` - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).
+ * `timezone 12h, timezone 24h` - change format of displayed time.
 
-Keyword: tz &lt;part of city name&gt; - searches for a city in your cities that matches that name and shows the current time.
+# CREDITS
 
-Keyword: tz &lt;date&gt; &lt;time&gt; - (where &lt;time&gt; is as above and &lt;date&gt; is 'today' [short: 't'], or 'tomorrow' [short: 'tm'], or &lt;number of days&gt;d what means to add the number of days to current date, or one of dd, mmdd, yymmdd, yyyymmdd to give an absolute date) - convert provided date and time into time of your cities.
-
-Keyword: tz &lt;source city&gt; &lt;date&gt; &lt;time&gt; - (where &lt;time&gt; and &lt;date&gt; are as above and &lt;source city&gt; is used to search in your city list) - assumes that date and time is given in the timezone of provided source city and converts it into time of your (other) cities.
-
-Keyword: timezone add [your city] - add your city to the list. (To remove a city, option-select it from the main list.)
-
-Keyword: timezone edit - open for edit of cities file.
-
-Keyword: timezone move - move the saved cities file (timezones.txt) to a location of your choice (so you can sync it in your Dropbox or whatever you want).
-
-Keyword: timezone 12h, timezone 24h - change format of displayed time.
-
-=======
-CREDITS
-=======
-
-GeoIP2 City and Country CSV Databases: https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/
-
-Flag icons from: http://www.free-country-flags.com
-(Creative Commons Attribution-ShareAlike 3.0 Unported License.)
-
-Icon design by Logo Open Stock (modified from original) http://www.logoopenstock.com
-
-OneUpdater https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater
+* GeoIP2 City and Country CSV Databases: https://dev.maxmind.com/geoip/geoip2/geoip2-city-country-csv-databases/
+* Flag icons from: http://www.free-country-flags.com (Creative Commons Attribution-ShareAlike 3.0 Unported License.)
+* Icon design by Logo Open Stock (modified from original) http://www.logoopenstock.com
+* OneUpdater https://github.com/vitorgalvao/alfred-workflows/tree/master/OneUpdater
 
 
-=========
-CHANGELOG
-=========
+# CHANGELOG
 
 All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred/issues
 
-2.50
+## 2.60
+25 February 2024
+* 
+
+## 2.50
 2 November 2022
 * Automatised upgrades #46
 
-2.41
+## 2.41
 2 November 2022
 * Fixed Option + Enter does not remove a locale #51
 
-2.40
+## 2.40
 9 October 2021
 * Toggle Fav List Does not Work #49
 
-
-2.30
+## 2.30
 9 February 2021
 * Big banner on copy changed to to MacOS notification #45
 * Changed format of text copied to clipboard (after pressing Enter) - now it's more compact "14:42 (Warsaw)" #45
 * Option to change time format copied to clipboard #45
 * Added flag for Bonaire #31
 
-
-
-2.20
+## 2.20
 4 November 2020
 * Fix for regression #39
 
-2.19
+## 2.19
 2 November 2020
 * #38 - Fix for AoE date - more updates
 * #22 - Added more UTC timezones 
 
-2.18
+## 2.18
 2 November 2020
 * #38 - Fix for AoE date 
 
-2.17
+## 2.17
 18 August 2020
 * #26 - Added support for AoE
 
-2.16
+## 2.16
 16 August 2020
 * Pull Request Fix incorrect City -&gt; Country mapping #35
 * Converted time copied to Clipboard after hitting Enter
 * Added hybrid time format: 24hr (12hr), i.e. 14:30 (2:30 pm). Change using 'timezone both'
 * #22, #25: Support for UTC timezone (timezone add utc)
 
-
-v2.15
+## v2.15
 1 September 2019
 * Missing flag for Åland (#29)
 
-v2.14
+## v2.14
 1 September 2019
 * Reverted handling of Dropbox timezones.txt (#23)
 * Asking wheither override when an existing timezones.txt in the new location (#27)
 
-v2.13
+## v2.13
 26 August 2019
 * Fixed an issue when more than 7 TimeZones (#28)
 
 
-v2.11-2.12
+## v2.11-2.12
 14 August 2019
 * Added option to disable sorting - when disabled, it will follow order from timezones.txt (#9)
 
 
-v2.10
+## v2.10
 11 June 2019
 * Netherlands' flag does not display properly (#24)
 
-v2.9
+## v2.9
 5 June 2019
 * Improved compatiblity with Alfred 4 (#19)
 
-v2.8
+## v2.8
 31 May 2019
 * Swap the pin/unpin as they were inversed #21
 
-v2.7
+## v2.7
 30 May 2019
 * Improved compatiblity with Alfred 4
 
-v2.6
+## v2.6
 11 May 2019
 * Updated bundleID in order to sumbit to http://www.packal.org
 
-v2.5
+## v2.5
 17 March 2019
 * zero-padding of hours in 24h format (solves #14)
 * no padding of hours in 12h format (solves #14)
 * sorting by favourite, resulting time ascending (that is west to east), city name (solves partly #9)
 * added feature for adjusting source date and timezone (solves #13, #15)
 
-v2.4
+## v2.4
 16 December 2018
 New feature #9: Favourite (pinned) cities (fixes)
 
-v2.3
+## v2.3
 9 November 2018
 New feature #9: Favourite (pinned) cities
 
-v2.2
+## v2.2
 9 November 2018
 Fixed version number.
 
-
-v2.1
+## v2.1
 6 November 2018
 Fix for issue #4 - cannot add a new city
 Fix for issue #5 - remove dependency to Growl
 
-v2.0
+## v2.0
 22 September 2018
 Fixes after google deprecating their map APIs.
 
-
-v1.9
+## v1.9
 4 May 2017
 
 * Configurable 12h/24h format. Keywords to switch "timezone 24h", "timezone 12h".
 
-v1.8
+## v1.8
 15 October 2016
 
 * Migration to Alfred 3
@@ -1394,27 +1376,27 @@ v1.8
 * Enabling 24-hrs time format
 * Displaying phone country code
 
-v1.7a
+## v1.7a
 4 August 2015
 
 * New 256x256px icon. That’s it.
 
-v1.7
+## v1.7
 22 March 2014
 
 * City List now always shows in the same order. (Achieved by removing “uid” parameter.)
 
-v1.61a
+## v1.61a
 16 March 2014
 
-*Removed Alleyoop update.json file. That’s all.
+* Removed Alleyoop update.json file. That’s all.
 
-v1.61
+## v1.61
 2 April 2013
 
-*Small fix for Netherlands flag matching.
+* Small fix for Netherlands flag matching.
 
-v1.6
+## v1.6
 31 March 2013
 
 * Now supports custom "one-off" lookups for places you don't want to permanently add to your main list. Just keep typing the place name after the "tz" keyword (or hotkey) - as soon as it doesn't match any of the places in your list, it will look up the custom place you've entered.
@@ -1422,7 +1404,7 @@ v1.6
 * [EXPERIMENTAL] - support for autocomplete for adding place names. You'll need to add a keyword yourself to the script filter if you want to try it out. The reason I haven't enabled it by default is that I've found it kind of slow and I'm not sure it's actually an improvement over the current method. Let me know what you think.
 * Added (unofficial) Antarctica flag to flag repository. (Try tz south pole. ;) )
 
-v1.5  
+## v1.5  
 28 March 2013
 
 * Major overhaul to now use Google's Geocoding API and Timezone API to acquire the required data. Should be a **lot** more reliable and consistent, as well as more flexible with input names.
@@ -1431,30 +1413,30 @@ v1.5
 * When doing a full "update", a text file is saved to the Desktop showing which cities have changed.
 * General enhancements and tweaks.
 
-v1.4  
+## v1.4  
 20 Mar 2013
 
 * You can now move your list of saved cities to a file location of your choice (eg. Dropbox, to sync between machines). Keyword: timezone move
 
-v1.3  
+## v1.3  
 18 Feb 2013
 
 * Fixes to account for changes to the Wolfram Alpha API
 * When doing a full "update", it won't fail the whole update if one city fails. A list of failed updates is saved to your Desktop.
 
-v1.2  
+## v1.2  
 4 Feb 2013
 
 * fixes to make "update" work better/properly/at all.
 
-v1.1  
+## v1.1  
 3 Feb 2013
 
 * Fixed the problem with cities with half-hour UTC offsets (eg. Adelaide—UTC+10.5, New Delhi—UTC+5.5
 * You can search the list of displayed cities (useful if you've got a lot) — just start typing after the "tz"
 * Hotkey to launch the list (set to Ctrl-Z by default)
 
-v1.0  
+## v1.0  
 2 Feb 2013
 
 * Initial release</string>
@@ -1505,9 +1487,9 @@ v1.0
 		<key>408AA1A8-69F7-45E1-AF88-D3B90A40A00E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>290</integer>
+			<real>290</real>
 			<key>ypos</key>
-			<integer>1405</integer>
+			<real>1405</real>
 		</dict>
 		<key>4D5D6C9D-E596-4EB1-A0A7-634814560B7F</key>
 		<dict>
@@ -1645,9 +1627,9 @@ v1.0
 		<key>CAFFEE63-507B-4755-ADDC-20AFDF0CE87E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>495</integer>
+			<real>495</real>
 			<key>ypos</key>
-			<integer>1405</integer>
+			<real>1405</real>
 		</dict>
 		<key>D8D3E88A-E982-4F27-B3AA-46DAD6C5D87F</key>
 		<dict>
@@ -1706,10 +1688,10 @@ v1.0
 			<real>1040</real>
 		</dict>
 	</dict>
-	<key>variablesdontexport</key>
+	<key>userconfigurationconfig</key>
 	<array/>
 	<key>version</key>
-	<string>2.50</string>
+	<string>2.60</string>
 	<key>webaddress</key>
 	<string>https://jhartman.pl/tag/time-zones/</string>
 </dict>
