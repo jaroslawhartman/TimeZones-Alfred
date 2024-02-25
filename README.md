@@ -2,7 +2,7 @@
 
 Do you like [Alfred](https://www.alfredapp.com/)? I like too… I’ve recently found bunch of very nice Workflows. For me, the most used one is for sure Time Zone.
 
-### Now compatible with Alfred 4!
+### Now compatible with Alfred 5!
 
 The workflow has been created by Mr Carlos from New Zealand and published on the [Alfred Forum](http://www.alfredforum.com/topic/491-timezones-a-world-clock-script-filter-updated-to-v17/). I’ve enhanced the workflow by adding a few new functionalities:
 
