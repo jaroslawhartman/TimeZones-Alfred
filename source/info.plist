@@ -1251,7 +1251,11 @@ All issues tracked on GitHub https://github.com/jaroslawhartman/TimeZones-Alfred
 
 ## 2.60
 25 February 2024
-* 
+* README updates
+* #56 Libya flag update
+* App New icon and About Workflow in Markdown
+* #53 removing country code phone numbers as causing problems on more modern MacOS
+* Make tz support time conversions for other zones without a date modification (#50)
 
 ## 2.50
 2 November 2022
@@ -1689,6 +1693,8 @@ Fixes after google deprecating their map APIs.
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
 	<string>2.60</string>
